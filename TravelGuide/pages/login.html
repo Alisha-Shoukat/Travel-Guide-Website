@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - WanderGuide</title>
+  <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body class="page">
+  <nav>
+    <a href="../index.html">WanderGuide</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="itineraries.html">Itineraries</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button onclick="location.href='signup.html'">Sign Up Free</button></li>
+      <li><button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">Moon</button></li>
+    </ul>
+  </nav>
+
+  <main class="auth-layout">
+    <div class="auth-media">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80" alt="Bali landscape">
+      <div class="auth-copy">
+        <h2>Adventure Awaits</h2>
+        <p>Log in to access your saved trips, personalized itineraries, and exclusive travel deals.</p>
+      </div>
+    </div>
+
+    <div class="auth-side">
+      <div class="form-container">
+        <h2>Welcome Back</h2>
+        <p>Log in to your WanderGuide account.</p>
+
+        <div class="alert">Demo: any email and password works.</div>
+
+        <form id="loginForm">
+          <div>
+            <label for="loginEmail">Email Address</label>
+            <input id="loginEmail" type="email" placeholder="you@email.com" required>
+            <span class="field-error">Required field</span>
+          </div>
+          <div>
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" type="password" placeholder="Password" required>
+            <span class="field-error">Required field</span>
+          </div>
+          <div class="auth-note">
+            <label class="checkbox-row compact">
+              <input type="checkbox">
+              Remember me
+            </label>
+            <button type="button" class="link-button">Forgot password?</button>
+          </div>
+          <button type="submit" class="btn-lg full-button">Log In</button>
+        </form>
+
+        <p class="section-subtitle">Don't have an account? <a href="signup.html">Sign up free</a></p>
+
+        <div class="social-row">
+          <button class="btn-outline" onclick="showToast('Google login coming soon!')">Google</button>
+          <button class="btn-outline" onclick="showToast('Facebook login coming soon!')">Facebook</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mini-footer">
+    <p>Copyright 2025 WanderGuide - <a href="../index.html">Back to Home</a></p>
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services and Travel Tips - WanderGuide</title>
+  <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body class="page">
+  <nav>
+    <a href="../index.html">WanderGuide</a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="itineraries.html">Itineraries</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><button onclick="location.href='signup.html'">Sign Up Free</button></li>
+      <li><button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">&#9789;</button></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=1400&q=70" alt="Travel planning">
+    <div class="hero-copy">
+      <h4>Expert Resources</h4>
+      <h1>Services and Travel Tips</h1>
+      <p>Everything you need before, during, and after your journey, from packing hacks to visa guides.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">What We Offer</h2>
+    <div class="divider"></div>
+    <div class="card-container services-grid">
+      <div class="card reveal">
+        <div class="card-body">
+          <div class="service-icon">&#128506;</div>
+          <h3>Trip Planning</h3>
+          <p>Work with our travel experts to craft a completely personalized itinerary. One consultation call, one perfect trip.</p>
+          <button class="btn-sm" onclick="location.href='contact.html'">Book a Consult</button>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-body">
+          <div class="service-icon">&#127968;</div>
+          <h3>Hotel Recommendations</h3>
+          <p>Curated stays for every budget from boutique guesthouses to five-star resorts, all vetted by our team.</p>
+          <button class="btn-sm" onclick="showToast('Exploring hotels...')">Find Hotels</button>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-body">
+          <div class="service-icon">&#9992;</div>
+          <h3>Flight Alerts</h3>
+          <p>Set price alerts for your dream routes. We'll notify you the moment fares drop to your target price.</p>
+          <button class="btn-sm" onclick="location.href='signup.html'">Set Alert</button>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-body">
+          <div class="service-icon">&#128203;</div>
+          <h3>Visa Guides</h3>
+          <p>Step-by-step visa instructions for 190+ countries, never miss a document or a deadline again.</p>
+          <button class="btn-sm" onclick="showToast('Loading visa guides...')">Check Visas</button>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-body">
+          <div class="service-icon">&#127760;</div>
+          <h3>Translation Help</h3>
+          <p>Offline phrasebooks and cultural etiquette guides for 60 languages, communicate confidently anywhere.</p>
+          <button class="btn-sm" onclick="showToast('Opening language guides...')">Explore Guides</button>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-body">
+          <div class="service-icon">&#128737;</div>
+          <h3>Travel Insurance</h3>
+          <p>Compare policies from top providers and get coverage quotes in under 2 minutes. Travel worry-free.</p>
+          <button class="btn-sm" onclick="showToast('Comparing policies...')">Get a Quote</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-soft">
+    <div class="tips-wrap">
+      <h2 class="section-title">Top Travel Tips</h2>
+      <div class="divider"></div>
+      <div class="card-container">
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=600&q=80" alt="Packing">
+          <div class="card-body">
+            <span class="tag">Packing</span>
+            <h3>The 5-4-3-2-1 Packing Method</h3>
+            <p>Five shirts, four bottoms, three pairs of shoes, pack light every time with this proven system.</p>
+            <a href="#">Read Article -></a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Budget">
+          <div class="card-body">
+            <span class="tag">Budget</span>
+            <h3>How to Find Cheap Flights</h3>
+            <p>Incognito mode, flexible dates, budget airlines, and the best aggregators can save up to 60% on airfare.</p>
+            <a href="#">Read Article -></a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600&q=80" alt="Safety">
+          <div class="card-body">
+            <span class="tag">Safety</span>
+            <h3>Solo Travel Safety Checklist</h3>
+            <p>From digital document backups to trusted contacts, build a complete safety system for going it alone.</p>
+            <a href="#">Read Article -></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Choose Your Plan</h2>
+    <p class="section-subtitle">Start free. Upgrade when you're ready to travel smarter.</p>
+    <div class="divider"></div>
+    <div class="table-container" style="max-width:800px;margin:0 auto;">
+      <table style="min-width:400px;max-width:800px;">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Free</th>
+            <th>Explorer ($9/mo)</th>
+            <th>Pro ($19/mo)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Destination Guides</td><td>50 destinations</td><td>All 4,200+</td><td>All + offline</td></tr>
+          <tr><td>Saved Itineraries</td><td>3 saved</td><td>20 saved</td><td>Unlimited</td></tr>
+          <tr><td>Itinerary Builder</td><td>No</td><td>Basic</td><td>Full + AI</td></tr>
+          <tr><td>Flight Price Alerts</td><td>No</td><td>5 routes</td><td>Unlimited</td></tr>
+          <tr><td>Hotel Recommendations</td><td>Basic</td><td>Curated</td><td>Exclusive deals</td></tr>
+          <tr><td>Visa Information</td><td>Basic</td><td>Full guides</td><td>Step-by-step</td></tr>
+          <tr><td>Travel Insurance</td><td>No</td><td>Comparisons</td><td>Priority quotes</td></tr>
+          <tr><td>Expert Consultations</td><td>No</td><td>No</td><td>2 sessions/mo</td></tr>
+          <tr><td>Ad-Free Experience</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="button-row">
+      <button class="btn-outline" onclick="location.href='signup.html'">Start Free</button>
+      <button onclick="location.href='signup.html'">Try Explorer - $9/mo</button>
+      <button class="btn-accent" onclick="location.href='signup.html'">Go Pro - $19/mo</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h1>WanderGuide</h1>
+        <p>Your trusted companion for smarter, richer, more meaningful travel.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="destinations.html">Destinations</a>
+        <a href="itineraries.html">Itineraries</a>
+        <a href="services.html">Travel Tips</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h2>Account</h2>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div>
+        <h2>Connect</h2>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">YouTube</a>
+        <a href="#">Newsletter</a>
+      </div>
+    </div>
+    <p class="footer-base">Copyright 2025 WanderGuide. Made for travelers everywhere.</p>
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

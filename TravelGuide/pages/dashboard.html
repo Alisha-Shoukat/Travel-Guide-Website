@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - WanderGuide</title>
+  <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body class="page">
+  <nav>
+    <a href="../index.html">WanderGuide</a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="itineraries.html">Itineraries</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="dashboard.html">My Dashboard</a></li>
+      <li><button class="btn-accent" onclick="location.href='login.html'">Log Out</button></li>
+      <li><button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">Moon</button></li>
+    </ul>
+  </nav>
+
+  <main class="dashboard-main">
+    <div class="welcome-banner">
+      <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=800&q=60" alt="Travel planning">
+      <div class="split-line">
+        <div>
+          <h4>Welcome back,</h4>
+          <h2>Jane Doe</h2>
+          <p>You have 2 upcoming trips and 1 pending itinerary to review.</p>
+        </div>
+        <button class="btn-accent" onclick="location.href='itineraries.html'">Browse Itineraries</button>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><strong>12</strong><span>Countries Visited</span></div>
+      <div class="stat-box"><strong>7</strong><span>Saved Itineraries</span></div>
+      <div class="stat-box"><strong>2</strong><span>Upcoming Trips</span></div>
+      <div class="stat-box"><strong>34</strong><span>Destinations Saved</span></div>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="trip-panel">
+        <h3>Upcoming Trips</h3>
+        <div class="table-container" style="max-width:680px;">
+          <table style="min-width:340px;max-width:680px;">
+            <thead>
+              <tr>
+                <th>Destination</th>
+                <th>Dates</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kyoto, Japan</td>
+                <td>Aug 12-22, 2025</td>
+                <td><span class="badge">Confirmed</span></td>
+                <td><button class="btn-tiny" onclick="showToast('Opening Kyoto itinerary...')">View</button></td>
+              </tr>
+              <tr>
+                <td>Bali, Indonesia</td>
+                <td>Nov 5-12, 2025</td>
+                <td><span class="tag tag-warm">Planning</span></td>
+                <td><button class="btn-tiny" onclick="showToast('Opening Bali planner...')">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Paris, France</td>
+                <td>Jan 8-14, 2026</td>
+                <td><span class="tag">Wishlist</span></td>
+                <td><button class="btn-tiny" onclick="showToast('Moving Paris to planning...')">Plan</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="quick-panel">
+        <h3>Quick Actions</h3>
+        <div class="quick-actions">
+          <button onclick="location.href='destinations.html'">Explore Destinations</button>
+          <button class="alt-button" onclick="location.href='itineraries.html'">Browse Itineraries</button>
+          <button class="btn-outline" onclick="showToast('Flight alerts dashboard coming soon!')">My Flight Alerts</button>
+          <button class="btn-outline" onclick="showToast('Opening packing lists...')">Packing Lists</button>
+          <button class="btn-outline" onclick="location.href='contact.html'">Contact Support</button>
+        </div>
+      </div>
+    </div>
+
+    <h3>Saved Destinations</h3>
+    <div class="card-container saved-grid">
+      <div class="card saved-card">
+        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&q=80" alt="Kyoto">
+        <div class="card-body">
+          <h3>Kyoto, Japan</h3>
+          <div class="stars">★★★★★</div>
+          <button class="btn-tiny" onclick="showToast('Removed from saved!')">Remove</button>
+        </div>
+      </div>
+      <div class="card saved-card">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=80" alt="Dubai">
+        <div class="card-body">
+          <h3>Dubai, UAE</h3>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-tiny" onclick="showToast('Removed from saved!')">Remove</button>
+        </div>
+      </div>
+      <div class="card saved-card">
+        <img src="https://images.unsplash.com/photo-1499856871958-5b9357976b82?w=400&q=80" alt="Paris">
+        <div class="card-body">
+          <h3>Paris, France</h3>
+          <div class="stars">★★★★★</div>
+          <button class="btn-tiny" onclick="showToast('Removed from saved!')">Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <h3>Recent Activity</h3>
+    <div class="table-container" style="max-width:860px;">
+      <table style="min-width:360px;max-width:860px;">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Details</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Saved Destination</td><td>Machu Picchu, Peru</td><td>Apr 18, 2025</td></tr>
+          <tr><td>Viewed Itinerary</td><td>Japan 10-Day Grand Tour</td><td>Apr 16, 2025</td></tr>
+          <tr><td>Insurance Quote</td><td>Europe Trip - 14 days</td><td>Apr 14, 2025</td></tr>
+          <tr><td>Flight Alert Set</td><td>LHR to NRT (London to Tokyo)</td><td>Apr 10, 2025</td></tr>
+          <tr><td>Searched</td><td>best beaches Southeast Asia</td><td>Apr 8, 2025</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h1>WanderGuide</h1>
+        <p>Your trusted companion for smarter, richer, more meaningful travel.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="destinations.html">Destinations</a>
+        <a href="itineraries.html">Itineraries</a>
+        <a href="services.html">Travel Tips</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h2>Account</h2>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div>
+        <h2>Connect</h2>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+    <p class="footer-base">Copyright 2025 WanderGuide. Made for travelers everywhere.</p>
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

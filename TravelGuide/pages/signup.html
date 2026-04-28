@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - WanderGuide</title>
+  <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body class="page">
+  <nav>
+    <a href="../index.html">WanderGuide</a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="itineraries.html">Itineraries</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">Moon</button></li>
+    </ul>
+  </nav>
+
+  <main class="auth-layout">
+    <div class="auth-side">
+      <div class="form-container">
+        <h2>Create Your Account</h2>
+        <p>Join thousands of travelers planning smarter trips with WanderGuide.</p>
+
+        <form id="signupForm">
+          <div class="inline-fields">
+            <div>
+              <label for="firstName">First Name</label>
+              <input id="firstName" type="text" placeholder="Jane" required>
+              <span class="field-error">Required</span>
+            </div>
+            <div>
+              <label for="lastName">Last Name</label>
+              <input id="lastName" type="text" placeholder="Doe" required>
+              <span class="field-error">Required</span>
+            </div>
+          </div>
+          <div>
+            <label for="signupEmail">Email Address</label>
+            <input id="signupEmail" type="email" placeholder="you@email.com" required>
+            <span class="field-error">Required</span>
+          </div>
+          <div>
+            <label for="signupPhone">Phone (optional)</label>
+            <input id="signupPhone" type="tel" placeholder="+1 555 000 0000">
+          </div>
+          <div>
+            <label for="travelStyle">Travel Style</label>
+            <div class="select-container">
+              <select id="travelStyle">
+                <option value="">Select your style...</option>
+                <option>Adventure and Outdoors</option>
+                <option>Culture and History</option>
+                <option>Luxury and Comfort</option>
+                <option>Budget Backpacker</option>
+                <option>Family Traveler</option>
+                <option>Solo Explorer</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="signupPassword">Password</label>
+            <input id="signupPassword" type="password" placeholder="Min. 8 characters" required>
+            <span class="field-error">Required</span>
+          </div>
+          <div>
+            <label for="signupPassword2">Confirm Password</label>
+            <input id="signupPassword2" type="password" placeholder="Repeat password" required>
+            <span class="field-error">Required</span>
+          </div>
+          <div>
+            <label class="checkbox-row">
+              <input type="checkbox" required>
+              <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</span>
+            </label>
+          </div>
+          <button type="submit" class="btn-lg full-button">Create My Account</button>
+        </form>
+
+        <p class="section-subtitle">Already have an account? <a href="login.html">Log in</a></p>
+      </div>
+    </div>
+
+    <div class="auth-media">
+      <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=900&q=80" alt="Travel map">
+      <div class="auth-copy">
+        <h2>Why Join WanderGuide?</h2>
+        <div class="perks-list">
+          <div class="perk-item">
+            <div class="perk-mark">01</div>
+            <div><strong>Personalized Itineraries</strong><p>AI-powered plans tailored to your pace, budget, and interests.</p></div>
+          </div>
+          <div class="perk-item">
+            <div class="perk-mark">02</div>
+            <div><strong>Save and Sync Trips</strong><p>Access your travel plans on any device, anytime.</p></div>
+          </div>
+          <div class="perk-item">
+            <div class="perk-mark">03</div>
+            <div><strong>Exclusive Deals</strong><p>Members-only discounts on hotels, flights, and experiences.</p></div>
+          </div>
+          <div class="perk-item">
+            <div class="perk-mark">04</div>
+            <div><strong>Community Reviews</strong><p>Real insights from fellow travelers around the world.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mini-footer">
+    <p>Copyright 2025 WanderGuide - <a href="../index.html">Back to Home</a></p>
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

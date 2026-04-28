@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itineraries - WanderGuide</title>
+  <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body class="page">
+  <nav>
+    <a href="../index.html">WanderGuide</a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="itineraries.html">Itineraries</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><button onclick="location.href='signup.html'">Sign Up Free</button></li>
+      <li><button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">Moon</button></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <img src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=1400&q=70" alt="Travel itinerary">
+    <div class="hero-copy">
+      <h4>Expert Crafted</h4>
+      <h1>Curated Travel Itineraries</h1>
+      <p>Day-by-day plans built by locals and seasoned explorers. Just pick one and go.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h4 class="section-title">Staff Pick</h4>
+    <h2 class="section-title">Japan in 10 Days: Tokyo to Kyoto</h2>
+    <div class="divider"></div>
+
+    <div class="spotlight-layout">
+      <div class="spotlight-card">
+        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&q=80" alt="Kyoto torii gates">
+        <div class="card-body">
+          <div class="pill-row">
+            <span class="badge">10 Days</span>
+            <span class="badge">Asia</span>
+            <span class="tag">Culture and Food</span>
+            <span class="tag">Moderate Budget</span>
+          </div>
+          <p>From the neon canyons of Shinjuku to the bamboo serenity of Arashiyama, this itinerary hits every essential while leaving room for discovery. Designed for first-timers who want depth, not just selfies.</p>
+          <button class="btn-accent" onclick="showToast('Itinerary saved to your dashboard!')">Save This Itinerary</button>
+        </div>
+      </div>
+
+      <div class="accordion-panel">
+        <h3>Day-by-Day Plan</h3>
+        <div class="accordion">
+          <div class="accordion-header">Days 1-2: Tokyo Arrival</div>
+          <div class="accordion-body"><p>Arrive at Narita or Haneda. Check in to Shinjuku. Explore Shibuya Crossing, Harajuku, and Meiji Shrine. Evening ramen in Shinjuku Golden Gai.</p></div>
+          <div class="accordion-header">Days 3-4: Tokyo Deep Dive</div>
+          <div class="accordion-body"><p>Senso-ji temple at dawn. TeamLab digital art. Akihabara electronics district. Tsukiji fish market breakfast. Tokyo Skytree at sunset.</p></div>
+          <div class="accordion-header">Day 5: Mt. Fuji Day Trip</div>
+          <div class="accordion-body"><p>Bullet train to Kawaguchiko. Walk the Fuji Five Lakes. Optional 5th-station hike. Return to Tokyo for farewell dinner.</p></div>
+          <div class="accordion-header">Days 6-7: Kyoto Temples</div>
+          <div class="accordion-body"><p>Shinkansen to Kyoto. Fushimi Inari at sunrise. Kinkaku-ji, the Golden Pavilion. Gion district at dusk.</p></div>
+          <div class="accordion-header">Days 8-9: Nara and Arashiyama</div>
+          <div class="accordion-body"><p>Feed the sacred deer of Nara. Visit Todai-ji. Walk the Arashiyama bamboo grove and join a tea ceremony workshop.</p></div>
+          <div class="accordion-header">Day 10: Osaka and Departure</div>
+          <div class="accordion-body"><p>Dotonbori street food, Osaka Castle, and your departure from Kansai Airport. Sayonara.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-soft">
+    <div class="wide-wrap">
+      <h2 class="section-title">More Itineraries to Explore</h2>
+      <div class="divider"></div>
+      <div class="card-container">
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=600&q=80" alt="Santorini">
+          <div class="card-body">
+            <span class="badge">7 Days</span>
+            <h3>Greek Islands Odyssey</h3>
+            <p>Santorini, Mykonos, and Crete for one unforgettable week in the Aegean.</p>
+            <a href="#">View Plan -></a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Europe trip">
+          <div class="card-body">
+            <span class="badge">14 Days</span>
+            <h3>Classic Europe Grand Tour</h3>
+            <p>London to Paris to Amsterdam to Rome. Four iconic cities, two weeks, countless memories.</p>
+            <a href="#">View Plan -></a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Bali">
+          <div class="card-body">
+            <span class="badge">5 Days</span>
+            <h3>Bali Bliss and Wellness</h3>
+            <p>Yoga retreats, temple blessings, rice terrace walks, and sunset at Tanah Lot.</p>
+            <a href="#">View Plan -></a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80" alt="Safari">
+          <div class="card-body">
+            <span class="badge">8 Days</span>
+            <h3>East Africa Safari</h3>
+            <p>Serengeti, Ngorongoro Crater, and Zanzibar beach in one unforgettable adventure.</p>
+            <a href="#">View Plan -></a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=600&q=80" alt="South America">
+          <div class="card-body">
+            <span class="badge">12 Days</span>
+            <h3>South America Highlights</h3>
+            <p>Rio, Iguazu Falls, Buenos Aires tango, and the salt flats of Bolivia in style.</p>
+            <a href="#">View Plan -></a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600&q=80" alt="Thailand">
+          <div class="card-body">
+            <span class="badge">10 Days</span>
+            <h3>Thailand: Temples to Beaches</h3>
+            <p>Bangkok street food, Chiang Mai elephants, and crystal Koh Samui waters.</p>
+            <a href="#">View Plan -></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-dark">
+    <h2 class="section-title">Build Your Own Itinerary</h2>
+    <p class="section-subtitle">Use our planner to create a fully custom day-by-day trip plan. Save it, share it, and travel with confidence.</p>
+    <div class="button-row">
+      <button class="btn-accent btn-lg" onclick="location.href='signup.html'">Start Planning Free</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h1>WanderGuide</h1>
+        <p>Your trusted companion for smarter, richer, more meaningful travel.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="destinations.html">Destinations</a>
+        <a href="itineraries.html">Itineraries</a>
+        <a href="services.html">Travel Tips</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h2>Account</h2>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div>
+        <h2>Connect</h2>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">YouTube</a>
+        <a href="#">Newsletter</a>
+      </div>
+    </div>
+    <p class="footer-base">Copyright 2025 WanderGuide. Made for travelers everywhere.</p>
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

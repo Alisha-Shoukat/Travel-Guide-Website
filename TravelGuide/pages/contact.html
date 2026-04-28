@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - WanderGuide</title>
+  <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body class="page">
+  <nav>
+    <a href="../index.html">WanderGuide</a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="itineraries.html">Itineraries</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><button onclick="location.href='signup.html'">Sign Up Free</button></li>
+      <li><button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">&#9789;</button></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1200&q=60" alt="Contact support">
+    <div class="hero-copy">
+      <h4>We're Here to Help</h4>
+      <h1>Contact WanderGuide</h1>
+      <p>Have a question, a partnership idea, or just want to share your travel story? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="contact-grid">
+      <div class="contact-side">
+        <h3>Get in Touch</h3>
+        <p>Our travel experts are available Monday-Friday, 9 am-6 pm GMT. We typically respond within 24 hours.</p>
+
+        <div class="contact-card">
+          <div class="card-body">
+            <div class="contact-mark">&#128231;</div>
+            <h4>Email Us</h4>
+            <p>hello@wanderguide.travel</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="card-body">
+            <div class="contact-mark">&#128222;</div>
+            <h4>Call Us</h4>
+            <p>+1 (800) 926-3374</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="card-body">
+            <div class="contact-mark">&#128205;</div>
+            <h4>Headquarters</h4>
+            <p>42 Explorer Lane, San Francisco, CA 94105, USA</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="card-body">
+            <div class="contact-mark">&#128172;</div>
+            <h4>Live Chat</h4>
+            <p>Chat with a travel expert right now.</p>
+            <button class="btn-sm" onclick="showToast('Live chat opening...')">Start Chat</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-container message-form">
+        <h3>Send Us a Message</h3>
+        <p>Fill out the form and we'll get back to you as soon as possible.</p>
+        <form id="contactForm">
+          <div class="inline-fields">
+            <div>
+              <label for="contactName">Full Name</label>
+              <input id="contactName" type="text" placeholder="Jane Doe" required>
+              <span class="field-error">Required</span>
+            </div>
+            <div>
+              <label for="contactEmail">Email</label>
+              <input id="contactEmail" type="email" placeholder="you@email.com" required>
+              <span class="field-error">Required</span>
+            </div>
+          </div>
+          <div>
+            <label for="contactTopic">Topic</label>
+            <div class="select-container">
+              <select id="contactTopic">
+                <option>General Inquiry</option>
+                <option>Trip Planning Help</option>
+                <option>Partnership / Press</option>
+                <option>Report an Issue</option>
+                <option>Feature Suggestion</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="contactSubject">Subject</label>
+            <input id="contactSubject" type="text" placeholder="How can we help?" required>
+            <span class="field-error">Required</span>
+          </div>
+          <div>
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" placeholder="Tell us more..." required></textarea>
+            <span class="field-error">Required</span>
+          </div>
+          <div>
+            <label class="checkbox-row compact">
+              <input type="checkbox">
+              Subscribe me to the WanderGuide newsletter
+            </label>
+          </div>
+          <button type="submit" class="btn-lg full-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-soft">
+    <div class="faq-wrap">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="divider"></div>
+      <div class="table-container" style="max-width:860px;margin:0 auto;">
+        <table style="min-width:400px;max-width:860px;">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Is WanderGuide free to use?</td><td>Yes. Basic access is completely free, and premium plans unlock advanced features.</td></tr>
+            <tr><td>How do I cancel my subscription?</td><td>Log into your Dashboard and navigate to Account, Billing, then Cancel Plan.</td></tr>
+            <tr><td>Can I contribute destination guides?</td><td>Absolutely. Join our Contributor Program from your dashboard profile.</td></tr>
+            <tr><td>Are the itineraries customizable?</td><td>Yes, all itineraries can be edited, saved, and re-ordered to suit your plans.</td></tr>
+            <tr><td>Do you partner with travel agencies?</td><td>We do. Email partnerships@wanderguide.travel for our partner pack.</td></tr>
+            <tr><td>How accurate is your travel information?</td><td>Our content team updates guides quarterly and sources from verified locals.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h1>WanderGuide</h1>
+        <p>Your trusted companion for smarter, richer, more meaningful travel.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="destinations.html">Destinations</a>
+        <a href="itineraries.html">Itineraries</a>
+        <a href="services.html">Travel Tips</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h2>Account</h2>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div>
+        <h2>Connect</h2>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">YouTube</a>
+        <a href="#">Newsletter</a>
+      </div>
+    </div>
+    <p class="footer-base">Copyright 2025 WanderGuide. Made for travelers everywhere.</p>
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>
